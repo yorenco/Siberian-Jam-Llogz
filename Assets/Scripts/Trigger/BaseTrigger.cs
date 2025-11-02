@@ -9,11 +9,11 @@ public abstract class BaseTrigger : MonoBehaviour, ITrigger
     protected Collider2D Collider;
     
     private bool _isActivated;
-    private bool _isColliderVisible;
+    private ColliderOutlineDrawer _colliderOutlineDrawer;
 
     private void Awake()
     {
-        Collider = GetComponent<Collider2D>();
+        
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -32,17 +32,12 @@ public abstract class BaseTrigger : MonoBehaviour, ITrigger
 
     public virtual void SetCollidersVisibility(bool visibility)
     {
-        _isColliderVisible = visibility;
-    }
-    
-    private void OnDrawGizmos()
-    {
-        if (_isColliderVisible == false)
-            return;
+        Collider = GetComponent<Collider2D>();
+        _colliderOutlineDrawer = new ColliderOutlineDrawer(Collider, Color.red);
         
-        Gizmos.color = Color.green;
-        Vector3 center = transform.position + new Vector3(Collider.offset.x, Collider.offset.y, 0);
-        Vector3 size = new Vector3(Collider.bounds.size.x, Collider.bounds.size.y, 0);
-        Gizmos.DrawWireCube(center, size);
+        if(visibility)
+            _colliderOutlineDrawer.Draw();
+        else
+            _colliderOutlineDrawer.Destroy();
     }
 }
