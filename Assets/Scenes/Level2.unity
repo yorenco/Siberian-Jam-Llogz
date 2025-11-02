@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 1830421728}
   - component: {fileID: 1830421727}
   m_Layer: 0
-  m_Name: LightSetter
+  m_Name: LevelSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1750,8 +1750,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2144831052}
-  - component: {fileID: 2144831053}
-  - component: {fileID: 2144831054}
   m_Layer: 0
   m_Name: Triggers
   m_TagString: Untagged
@@ -1778,30 +1776,6 @@ Transform:
   - {fileID: 1911663330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2144831053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144831051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6feef7a0c8e60124393d161792d9afe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TriggersSetter
---- !u!114 &2144831054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144831051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6feef7a0c8e60124393d161792d9afe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TriggersSetter
 --- !u!1001 &571361907205883426
 PrefabInstance:
   m_ObjectHideFlags: 0

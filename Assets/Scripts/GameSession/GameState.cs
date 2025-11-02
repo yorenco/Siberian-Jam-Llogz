@@ -3,12 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour
 {
+    private const int FirstLevel = 1;
+    
     public static GameState Instance { get; private set; }
-    public static GameSaverLoader GameSaverLoader = new ();
-    
+    private static readonly GameSaverLoader s_gameSaverLoader = new();
+
     [SerializeField] private int _currentLevel = 1;
-    
+    [SerializeField] private bool _hasLightning;
+    [SerializeField] private bool _hasDrawingColliders;
+    [SerializeField] private int _maxLevel = 2;
+
     public int CurrentLevel => _currentLevel;
+    public bool HasLightning => _hasLightning;
+    public bool HasDrawingColliders => _hasDrawingColliders;
 
     private void Awake()
     {
@@ -28,10 +35,32 @@ public class GameState : MonoBehaviour
         SaveGame();
         Debug.Log($"Уровень установлен: {_currentLevel}");
     }
-    
+
+    public void SetFirstLevel()
+    {
+        SetLevel(FirstLevel);
+    }
+
     public void GoToNextLevel()
     {
-        SetLevel(_currentLevel + 1);
+        if (_currentLevel >= _maxLevel)
+        {
+            SetFirstLevel();
+            
+            if (_hasLightning == false)
+            {
+                SetLightning();
+            }
+            else if (_hasDrawingColliders == false)
+            {
+                SetDrawingColliders();
+            }
+        }
+        else
+        {
+            SetLevel(_currentLevel + 1);
+        }
+
         LoadCurrentLevel();
     }
 
@@ -39,14 +68,35 @@ public class GameState : MonoBehaviour
     {
         SceneManager.LoadScene(_currentLevel);
     }
-    
-    public void SaveGame()
-    {
-        GameSaverLoader.SaveGame(this);
-    }
-    
+
     public void LoadGame()
     {
-        GameSaverLoader.LoadGame(this);
+        s_gameSaverLoader.LoadGame(this);
+    }
+
+    public void SetLightning()
+    {
+        _hasLightning = true;
+        SaveGame();
+    }
+
+    public void SetDrawingColliders()
+    {
+        _hasDrawingColliders = true;
+        SaveGame();
+    }
+
+    [ContextMenu("Reset Progress")]
+    public void ResetProgress()
+    {
+        _currentLevel = 1;
+        _hasLightning = false;
+        _hasDrawingColliders = false;
+        SaveGame();
+    }
+
+    private void SaveGame()
+    {
+        s_gameSaverLoader.SaveGame(this);
     }
 }
