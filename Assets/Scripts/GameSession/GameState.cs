@@ -28,6 +28,12 @@ public class GameState : MonoBehaviour
         SaveGame();
         Debug.Log($"Уровень установлен: {_currentLevel}");
     }
+    
+    public void GoToNextLevel()
+    {
+        SetLevel(_currentLevel + 1);
+        LoadCurrentLevel();
+    }
 
     public void LoadCurrentLevel()
     {

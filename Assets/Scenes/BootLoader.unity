@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameBootLoader
   _gameState: {fileID: 1179886059}
+  _testLevel: 1
 --- !u!4 &898538946
 Transform:
   m_ObjectHideFlags: 0
