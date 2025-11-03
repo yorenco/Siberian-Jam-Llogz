@@ -28,7 +28,9 @@ public class PlayerRoot : MonoBehaviour
             _playerMovement.Jump();
         
         if (_playerInput.SitDownInput)
-            Debug.Log("SitDown");
+            _playerMovement.SitDown();
+        else
+            _playerMovement.StandUp();
     }
     
     private void UpdateAnimation()
