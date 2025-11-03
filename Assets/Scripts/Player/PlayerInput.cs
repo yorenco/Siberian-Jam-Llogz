@@ -18,7 +18,9 @@ public class PlayerInput : MonoBehaviour, IPlayerInput
         _controls.Player.Move.canceled += OnMoveCanceled;
 
         _controls.Player.Jump.performed += ctx => _jumpPressed = true;
+        
         _controls.Player.SitDown.performed += ctx => _sitDownPressed = true;
+        _controls.Player.SitDown.canceled += ctx => _sitDownPressed = false;
     }
 
     private void OnEnable() => _controls.Enable();
@@ -52,7 +54,7 @@ public class PlayerInput : MonoBehaviour, IPlayerInput
         get
         {
             bool wasPressed = _sitDownPressed;
-            _sitDownPressed = false; // сбрасываем, чтобы кнопка реагировала как GetButtonDown
+            //_sitDownPressed = false; // сбрасываем, чтобы кнопка реагировала как GetButtonDown
             return wasPressed;
         }
     }

@@ -8,6 +8,8 @@ public class PlayerMovementSimple : MonoBehaviour, IPlayerMovement
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float _jumpForce = 1.5f;
     [SerializeField] private float _speedMax = 5f;
+    [SerializeField] private float _sitDownScale = 0.5f;
+    [SerializeField] private float _standUpScale = 1f;
 
     private float _currentSpeed;
     
@@ -50,5 +52,15 @@ public class PlayerMovementSimple : MonoBehaviour, IPlayerMovement
         Vector2 velocity = _rigidbody.linearVelocity;
         velocity.y += _jumpForce;
         _rigidbody.linearVelocity = velocity;
+    }
+    
+    public void SitDown()
+    {
+        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, _sitDownScale, gameObject.transform.localScale.z);
+    }
+    
+    public void StandUp()
+    {
+        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, _standUpScale, gameObject.transform.localScale.z);
     }
 }
