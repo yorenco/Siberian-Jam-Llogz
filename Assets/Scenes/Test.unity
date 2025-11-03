@@ -736,13 +736,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5703197576005172766, guid: 47a170278f197194283bf8a02351ce65, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883259460432548934, guid: 47a170278f197194283bf8a02351ce65, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883259460432548934, guid: 47a170278f197194283bf8a02351ce65, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883259460432548934, guid: 47a170278f197194283bf8a02351ce65, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6883259460432548934, guid: 47a170278f197194283bf8a02351ce65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6883259460432548934, guid: 47a170278f197194283bf8a02351ce65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6883259460432548934, guid: 47a170278f197194283bf8a02351ce65, type: 3}
       propertyPath: m_LocalPosition.z
