@@ -12,11 +12,12 @@ public class GameState : MonoBehaviour
     [SerializeField] private bool _hasLightning;
     [SerializeField] private bool _hasDrawingColliders;
     [SerializeField] private int _maxLevel = 2;
+    [SerializeField] private float _volume = 0.8f;
 
     public int CurrentLevel => _currentLevel;
     public bool HasLightning => _hasLightning;
     public bool HasDrawingColliders => _hasDrawingColliders;
-
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)

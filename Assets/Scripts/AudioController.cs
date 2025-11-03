@@ -8,12 +8,14 @@ public class AudioController : MonoBehaviour
     private const float SliderMaxValue = 1f;
     private const float VolumeMin = -80f;
     private const float VolumeConvertCoefficient = 20f;
+    
+    private const string VolumeKey = "Volume";
 
     [SerializeField] private AudioMixer AudioMixer;
     [SerializeField] private Slider VolumeSlider;
     [SerializeField] private string VolumeParameterName;
 
-    private float Volume;
+    private float Volume = 0.8f;
 
     private void Awake()
     {
@@ -26,6 +28,8 @@ public class AudioController : MonoBehaviour
     private void Start()
     {
         VolumeSlider.onValueChanged.AddListener(ChangeVolume);
+        Volume = VolumeSlider.value = LoadVolume();
+        ChangeVolume(Volume);
     }
 
     private void OnDestroy()
@@ -49,5 +53,20 @@ public class AudioController : MonoBehaviour
         {
             Debug.LogError("Volume parameter name is null");
         }
+    }
+    
+    private float LoadVolume()
+    {   
+        float result = PlayerPrefs.GetFloat(VolumeKey);
+        
+        if (result == 0)
+            result = Volume;
+        
+        return result;
+    }
+    
+    private void SaveVolume()
+    {
+        PlayerPrefs.SetFloat(VolumeKey, Volume);
     }
 }
