@@ -5,6 +5,7 @@ public class PingPongTrigger : MonoBehaviour, ITrigger
 {
     [SerializeField] private float _periodTime;
     [SerializeField] private GameObject _target;
+    [SerializeField] private GameObject _target2;
 
     private WaitForSeconds _delay;
      
@@ -25,6 +26,7 @@ public class PingPongTrigger : MonoBehaviour, ITrigger
         {
             yield return _delay;
             _target.SetActive(!_target.activeSelf);
+            _target2.SetActive(!_target2.activeSelf);
         }
     }
 }
