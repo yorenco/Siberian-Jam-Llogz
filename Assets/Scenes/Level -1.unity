@@ -1192,7 +1192,7 @@ Transform:
   m_GameObject: {fileID: 304905859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.086, y: -0.96, z: 0}
+  m_LocalPosition: {x: -0.65, y: 3.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1355,9 +1355,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
   _canRepeat: 1
   _delay: 0
-  _clips:
-  - {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
-  - {fileID: 8300000, guid: dc6614beca09347ec9b258f12d154bdd, type: 3}
+  _records:
+  - _clip: {fileID: 8300000, guid: 9158be505ace5b043a0c6bf7dacc03fc, type: 3}
+    _text: "\u0411\u0443\u043C-\u0411\u0443\u043C-\u0427\u0430\u043E"
+    _timeText: 2
 --- !u!1001 &377736872
 PrefabInstance:
   m_ObjectHideFlags: 0
