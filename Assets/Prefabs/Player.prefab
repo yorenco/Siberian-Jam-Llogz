@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundChecker
   _offset: {x: 0, y: -0.225}
-  _size: {x: 0.4, y: 0.1}
+  _size: {x: 0.25, y: 0.1}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
