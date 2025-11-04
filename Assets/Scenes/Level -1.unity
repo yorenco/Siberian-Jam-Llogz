@@ -1771,10 +1771,6 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 5506867681024486098, guid: 52337df23fc13d74fae787f370351b45, type: 3}
-      propertyPath: _jumpForce
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7280266500276697422, guid: 52337df23fc13d74fae787f370351b45, type: 3}
       propertyPath: m_Color.a
       value: 0.6039216

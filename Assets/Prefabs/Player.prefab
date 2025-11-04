@@ -84,7 +84,7 @@ MonoBehaviour:
   _groundChecker: {fileID: 0}
   _wallChecker: {fileID: 0}
   _rigidbody: {fileID: 0}
-  _jumpForce: 8
+  _jumpForce: 5.4
   _speedMax: 5
   _sitDownScale: 0.5
   _standUpScale: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundChecker
   _offset: {x: 0, y: -0.225}
-  _size: {x: 0.25, y: 0.1}
+  _size: {x: 0.4, y: 0.1}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
