@@ -976,6 +976,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4346244404228752641, guid: 437e2e930dfae9840a53c447a929fb67, type: 3}
+    - target: {fileID: 126063730844775987, guid: 3f7026a39cade55458e113fce8e1ce71, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 126063730844775987, guid: 3f7026a39cade55458e113fce8e1ce71, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 126063730844775987, guid: 3f7026a39cade55458e113fce8e1ce71, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3646398327855523459, guid: 3f7026a39cade55458e113fce8e1ce71, type: 3}
       propertyPath: m_Name
       value: KillerTest (4)
@@ -3584,7 +3596,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 5670658643560298596, guid: 04b2933709771644f824c5a53a2539bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
