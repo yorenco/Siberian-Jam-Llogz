@@ -3241,7 +3241,7 @@ MonoBehaviour:
   _delay: 0
   _target: {fileID: 125463016}
   _destination: {fileID: 692085630}
-  _speed: 0.3
+  _speed: 0.1
 --- !u!61 &1765272493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3915,7 +3915,7 @@ MonoBehaviour:
   _delay: 0
   _target: {fileID: 1649985496}
   _destination: {fileID: 692085630}
-  _speed: 0.3
+  _speed: 0.1
 --- !u!61 &2099321594
 BoxCollider2D:
   m_ObjectHideFlags: 0
