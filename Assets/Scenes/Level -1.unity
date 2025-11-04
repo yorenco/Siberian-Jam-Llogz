@@ -3382,7 +3382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisappearTrigger
   _canRepeat: 0
-  _delay: 0
+  _delay: 1.5
   _target: {fileID: 195441927}
 --- !u!1 &2034195450
 GameObject:
