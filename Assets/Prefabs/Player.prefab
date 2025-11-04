@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WallChecker
   _leftOffset: {x: -0.16, y: 0}
   _rightOffset: {x: 0.16, y: 0}
-  _size: {x: 0.1, y: 0.46}
+  _size: {x: 0.1, y: 0.4555}
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
