@@ -254,7 +254,7 @@ MonoBehaviour:
   _currentLevel: 1
   _hasLightning: 0
   _hasDrawingColliders: 0
-  _maxLevel: 2
+  _maxLevel: 5
   _volume: 0.8
 --- !u!4 &1179886060
 Transform:
