@@ -57,10 +57,12 @@ public class PlayerMovementSimple : MonoBehaviour, IPlayerMovement
     public void SitDown()
     {
         gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, _sitDownScale, gameObject.transform.localScale.z);
+        _wallChecker.SetSizeCoefficients(new Vector2(1, _sitDownScale));
     }
     
     public void StandUp()
     {
         gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, _standUpScale, gameObject.transform.localScale.z);
+        _wallChecker.SetSizeCoefficients(new Vector2(1, _standUpScale));
     }
 }

@@ -13,6 +13,7 @@ public class WallChecker : MonoBehaviour
 
     private Vector3 _leftOffset3D;
     private Vector3 _rightOffset3D;
+    private Vector2 _sizeCoefficients;
     
     public bool IsLeftWallTouched => CheckLeftWall();
     public bool IsRightWallTouched => CheckRightWall();
@@ -23,16 +24,23 @@ public class WallChecker : MonoBehaviour
         _rightOffset3D = new Vector3(_rightOffset.x, _rightOffset.y, 0);
     }
     
+    public void SetSizeCoefficients(Vector2 sizeCoefficients)
+    {
+        _sizeCoefficients = sizeCoefficients;
+    }
+    
     private bool CheckLeftWall()
     {
-        Collider2D colliderOverlapped = Physics2D.OverlapBox(transform.position + _leftOffset3D, _size, 0f, _layerMask);
+        Collider2D colliderOverlapped = Physics2D.OverlapBox(transform.position + _leftOffset3D, 
+            _size * _sizeCoefficients, 0f, _layerMask);
         
         return colliderOverlapped != null;
     }    
     
     private bool CheckRightWall()
     {
-        Collider2D colliderOverlapped = Physics2D.OverlapBox(transform.position + _rightOffset3D, _size, 0f, _layerMask);
+        Collider2D colliderOverlapped = Physics2D.OverlapBox(transform.position + _rightOffset3D, 
+            _size * _sizeCoefficients, 0f, _layerMask);
         
         return colliderOverlapped != null;
     }
