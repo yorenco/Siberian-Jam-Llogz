@@ -12,6 +12,8 @@ public class PingPongTrigger : MonoBehaviour, ITrigger
     private void Awake()
     {
         _delay = new WaitForSeconds(_periodTime);
+        _target.SetActive(false);
+        _target2.SetActive(true);
         Activate();
     }
     
