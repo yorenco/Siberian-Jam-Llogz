@@ -1,20 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public abstract class BaseTrigger : MonoBehaviour, ITrigger
 {
-    [Tooltip("Требуется ли повторное срабатывание")]
-    [SerializeField] private bool _canRepeat;
-    
+    [Tooltip("Требуется ли повторное срабатывание")] [SerializeField]
+    private bool _canRepeat;
+
+    [SerializeField] private float _delay;
+
     protected Collider2D Collider;
-    
+
     private bool _isActivated;
     private ColliderOutlineDrawer _colliderOutlineDrawer;
-
-    private void Awake()
-    {
-        
-    }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,7 +23,11 @@ public abstract class BaseTrigger : MonoBehaviour, ITrigger
             return;
 
         _isActivated = true;
-        Activate();
+
+        if (_delay > 0)
+            StartCoroutine(ActivateWithDelay());
+        else
+            Activate();
     }
 
     public abstract void Activate();
@@ -34,10 +36,16 @@ public abstract class BaseTrigger : MonoBehaviour, ITrigger
     {
         Collider = GetComponent<Collider2D>();
         _colliderOutlineDrawer = new ColliderOutlineDrawer(Collider, Color.red);
-        
-        if(visibility)
+
+        if (visibility)
             _colliderOutlineDrawer.Draw();
         else
             _colliderOutlineDrawer.Destroy();
+    }
+
+    private IEnumerator ActivateWithDelay()
+    {
+        yield return new WaitForSeconds(_delay);
+        Activate();
     }
 }
