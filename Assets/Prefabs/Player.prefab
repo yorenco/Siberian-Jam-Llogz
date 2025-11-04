@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cbb671158df430438534a184e966f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallChecker
-  _leftOffset: {x: -0.17, y: 0}
-  _rightOffset: {x: 0.17, y: 0}
-  _size: {x: 0.1, y: 0.3}
+  _leftOffset: {x: -0.16, y: 0}
+  _rightOffset: {x: 0.16, y: 0}
+  _size: {x: 0.1, y: 0.46}
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
