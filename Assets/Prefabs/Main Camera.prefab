@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow2D
   _target: {fileID: 0}
-  _smoothSpeed: 5
-  _xThreshold: 2
-  _yThreshold: 1.5
+  _smoothSpeed: 2
+  _xThreshold: 0.125
+  _yThreshold: 0.125
   _drawGizmos: 0
