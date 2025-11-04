@@ -84,7 +84,7 @@ MonoBehaviour:
   _groundChecker: {fileID: 0}
   _wallChecker: {fileID: 0}
   _rigidbody: {fileID: 0}
-  _jumpForce: 4
+  _jumpForce: 8
   _speedMax: 5
   _sitDownScale: 0.5
   _standUpScale: 1
