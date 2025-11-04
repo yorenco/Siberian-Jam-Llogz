@@ -86,6 +86,8 @@ MonoBehaviour:
   _rigidbody: {fileID: 0}
   _jumpForce: 4
   _speedMax: 5
+  _sitDownScale: 0.5
+  _standUpScale: 1
 --- !u!114 &2343779778979454858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2f3d39722d64646842352a5a840080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundChecker
-  _offset: {x: 0, y: -0.1}
-  _size: {x: 1, y: 0.1}
+  _offset: {x: 0, y: -0.225}
+  _size: {x: 0.4, y: 0.1}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -301,7 +303,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0023423433, y: -0.0033623427}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -311,7 +313,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.34270406, y: 0.46967003}
   m_EdgeRadius: 0
 --- !u!1 &5604995051794908439
 GameObject:
