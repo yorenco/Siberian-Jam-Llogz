@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 7280266500276697422}
   - component: {fileID: 4064400684608871524}
   - component: {fileID: 6215266270351371633}
+  - component: {fileID: 8728773730165812434}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -315,6 +316,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.34270406, y: 0.46967003}
   m_EdgeRadius: 0
+--- !u!114 &8728773730165812434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503346293606618537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2f9d3b91913f54bbd3da3a527886f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFlipper
+  _transform: {fileID: 1070534121271487737}
 --- !u!1 &5604995051794908439
 GameObject:
   m_ObjectHideFlags: 0
